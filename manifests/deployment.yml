@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: yidikuyepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yidikuyepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: yidikuyepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: yidikuyepipelinesjavascriptdocker 
+          image: ptbecoeejayregistry.azurecr.io/yidikuyepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
